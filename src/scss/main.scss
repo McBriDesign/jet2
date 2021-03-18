@@ -2,12 +2,12 @@
 @import 'colours';
 
 *{box-sizing:border-box}
-body{font-family:'Open Sans',sans-serif;background-color:$secondary;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}
+body{font-family:'Open Sans',sans-serif;background-color:$secondary;min-height:100vh;margin:0}
 
 //Table
 .dataTable{width: 90%; border-collapse: collapse; margin: 50px auto; background-color: $lightest; text-align: left; font-size: 14px;}
 .dataTable__row:nth-of-type(odd) { background: $lighter;}
-.dataTable__header, .dataTable__cell{ width:20%;padding: 15px;}
+.dataTable__header, .dataTable__cell{ width:20%;padding: 15px; text-align: left;}
 .dataTable__header{ background-color: $lightest;}
 .dataTable__cell--premium::before{content: "\2605"; color: $premium; padding-right: 3px;}
 
