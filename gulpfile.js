@@ -11,15 +11,15 @@ function scssTask(){
     return src('src/scss/main.scss', { sourcemaps: true })
         .pipe(sass())
         .pipe(postcss([cssnano()]))
-        .pipe(dest('dist/css', { sourcemaps: true }));
+        .pipe(dest('src/css', { sourcemaps: true }));
 }
 
 function jsTask(){
     return src(['node_modules/babel-polyfill/dist/polyfill.js', 'src/js/main.js'], { sourcemaps: true })
         .pipe(babel({
-          presets: ['@babel/preset-env']
+          presets: [['@babel/preset-env']]
         }))
-        .pipe(dest('dist/js', { sourcemaps: '.' }));
+        .pipe(dest('src/js/es5/', { sourcemaps: '.' }));
 }
 
 function browsersyncServe(cb){
