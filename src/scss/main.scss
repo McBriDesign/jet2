@@ -1,0 +1,23 @@
+@import 'fonts';
+@import 'colours';
+
+*{box-sizing:border-box}
+body{font-family:'Open Sans',sans-serif;background-color:$secondary;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}
+
+//Table
+.dataTable{width: 90%; border-collapse: collapse; margin: 50px auto; background-color: $lightest; text-align: left; font-size: 14px;}
+.dataTable__row:nth-of-type(odd) { background: $lighter;}
+.dataTable__header, .dataTable__cell{ width:20%;padding: 15px;}
+.dataTable__header{ background-color: $lightest;}
+.dataTable__cell--premium::before{content: "\2605"; color: $premium; padding-right: 3px;}
+
+// Modal
+.modalContainer{position:fixed;display:flex;align-items:flex-end;justify-content:center;top:0;left:0;height:100vh;width:100vw;background-color:rgba(0,0,0,0.3)}
+.modalContainer__modal{width: 100%; background-color:$lightest; padding:5%}
+.modalContainer__title{color: $primary;}
+.modalContainer--hide{display: none;}
+
+// Buttons 
+.btn{width:100%; max-width: 500px;height:48px;border-radius:5px;border:none;font-style:italic;font-weight:700;border:solid 2px $primary; margin: 2% 0;}
+.btn--primary{color: $primary;}
+.btn--secondary{color: $lightest; background-color: $primary;} 

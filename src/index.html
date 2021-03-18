@@ -4,11 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <title>Jet2 - Bookings</title>
+    <title>Jet2 - Assessment</title>
 </head>
 <body>
 
+<table class="dataTable">
+	<thead>
+      <tr class="dataTable__row">
+        <th class="dataTable__header">Dest.</th>
+        <th class="dataTable__header">Date</th>
+        <th class="dataTable__header">Price</th>
+        <th class="dataTable__header">&nbsp;</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr class="dataTable__row">
+        <td class="dataTable__cell">Ibiza</td>
+        <td class="dataTable__cell">21/06/2021</td>
+        <td class="dataTable__cell">£479</td>
+        <td class="dataTable__cell"><button class="btn btn--secondary open" data-modal-id="modal1">Book</button></td>
+      </tr>
+      <tr class="dataTable__row">
+        <td class="dataTable__cell">Alicante</td>
+        <td class="dataTable__cell">29/07/2021</td>
+        <td class="dataTable__cell">£360</td>
+        <td class="dataTable__cell"><button class="btn btn--secondary open" id="open" data-modal-id="modal1">Book</button></td>
+      </tr>
+      <tr class="dataTable__row">
+        <td class="dataTable__cell dataTable__cell--premium">Leeds</td>
+        <td class="dataTable__cell">21/06/2021</td>
+        <td class="dataTable__cell">N/A</td>
+        <td class="dataTable__cell"><button class="btn btn--secondary open" id="open" data-modal-id="modal1">Book</button></td>
+      </tr> 
+  </tbody>
+</table>
 
-<script src="/js/main.js"></script>
+
+<div class="modalContainer modalContainer--hide" id="modal1">
+    <div class="modalContainer__modal" id="modal1">
+        <h3 class="modalContainer__title">Congratulations, your Jet2 holiday booking has been confirmed!</h3>
+        <p class="modalContainer__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate earum laborum magnam nulla illum vero, voluptatem, molestiae qui excepturi repellat possimus id ad, impedit facere nesciunt accusamus nihil a natus?</p>
+        
+        <button class="btn btn--primary close" data-modal-id="modal1" id="close">Cancel</button>
+        <button class="btn btn--secondary">Continue</button>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var ie = (window.navigator.userAgent.match(/MSIE|Trident/) !== null);
+    if(ie == false) { 
+      document.write ("<script src=\"js/main.js\"></scr"+"ipt>");
+    } else {
+      document.write ("<script src=\"js/es5/main.js\"></scr"+"ipt>");
+    }
+</script>
+
+
 </body>
 </html>

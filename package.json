@@ -23,6 +23,7 @@
     "@babel/preset-env"
   ],
   "dependencies": {
+    "classlist-polyfill": "^1.2.0",
     "cssnano": "^4.1.10",
     "gulp-postcss": "^9.0.0"
   }

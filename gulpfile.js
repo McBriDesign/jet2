@@ -11,7 +11,7 @@ function scssTask(){
     return src('src/scss/main.scss', { sourcemaps: true })
         .pipe(sass())
         .pipe(postcss([cssnano()]))
-        .pipe(dest('src/css', { sourcemaps: true }));
+        .pipe(dest('dist/css', { sourcemaps: true }));
 }
 
 function jsTask(){
@@ -19,7 +19,7 @@ function jsTask(){
         .pipe(babel({
           presets: ['@babel/preset-env']
         }))
-        .pipe(dest('dist', { sourcemaps: '.' }));
+        .pipe(dest('dist/js', { sourcemaps: '.' }));
 }
 
 function browsersyncServe(cb){
